@@ -6,7 +6,7 @@ import classes from "./ErrorModel.module.css";
 const ErrorModel = (props) => {
   return (
     <div>
-      <div className={classes.backdrop} />
+      <div className={classes.backdrop} onClick={props.resetPage} />
       <Card className={classes.modal}>
         <header className={classes.header}>
           <h2>{props.title}</h2>
@@ -15,7 +15,7 @@ const ErrorModel = (props) => {
           <p>{props.message}</p>
         </div>
         <footer className={classes.actions}>
-          <Button>OK</Button>
+          <Button onClick={props.resetPage}>OK</Button>
         </footer>
       </Card>
     </div>
